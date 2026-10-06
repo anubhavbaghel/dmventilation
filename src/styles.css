@@ -59,18 +59,28 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-bright: var(--brand-bright);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-line: var(--line);
+  --color-mute: var(--mute);
+  --font-head: "Sora", sans-serif;
+  --font-body: "Manrope", sans-serif;
 }
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.96 0.008 274);
+  --foreground: oklch(0.28 0.02 270);
+  --card: oklch(0.99 0.003 274);
+  --card-foreground: oklch(0.28 0.02 270);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.39 0.17 272);
+  --primary-foreground: oklch(0.99 0.003 274);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
@@ -79,9 +89,17 @@
   --accent-foreground: oklch(0.208 0.042 265.755);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.87 0.015 274);
+  --input: oklch(0.87 0.015 274);
+  --ring: oklch(0.39 0.17 272);
+  --brand: oklch(0.39 0.17 272);
+  --brand-deep: oklch(0.29 0.12 272);
+  --brand-bright: oklch(0.46 0.18 272);
+  --paper: oklch(0.96 0.008 274);
+  --surface: oklch(0.99 0.003 274);
+  --ink: oklch(0.28 0.02 270);
+  --line: oklch(0.87 0.015 274);
+  --mute: oklch(0.53 0.025 270);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +158,25 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-body);
+    letter-spacing: 0;
+    margin: 0;
   }
+
+  html { scroll-behavior: smooth; }
+  a:focus-visible, button:focus-visible { outline: 3px solid color-mix(in oklab, var(--brand) 45%, transparent); outline-offset: 3px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+@keyframes image-in {
+  from { opacity: 0; transform: scale(1.015); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@utility image-in {
+  animation: image-in 600ms ease-out both;
 }
