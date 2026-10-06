@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# DMVentilation Redesign
+
+https://www.dmventilation.com/index.html Analyze this website. This website is currently made on very old stacks, so we would like to upgrade its design. But as this is a commercial / industrial website we would not be focusing too much on the fancy design but functionality and practicality while keeping care of design to be modern, User friendly.
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://dmventilation.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ba5d6088-aa1a-4724-b34c-e3948130af49).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
